@@ -90,6 +90,7 @@ export function tokenize(input_text: string): KuromojiJSToken[];
 
 #[wasm_bindgen(skip_typescript)]
 pub fn tokenize(input_text: &str) -> JsValue {
+    #[cfg(feature = "console_error_panic_hook")]
     console_error_panic_hook::set_once();
     let tokens = TOKENIZER.lock().unwrap().tokenize(input_text).unwrap();
 
