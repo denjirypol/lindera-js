@@ -85,7 +85,7 @@ interface KuromojiJSToken {
     pronunciation: string,
 }
 
-export function tokenize(input_text: string): KuromojiJSToken;
+export function tokenize(input_text: string): KuromojiJSToken[];
 "#;
 
 #[wasm_bindgen(skip_typescript)]
